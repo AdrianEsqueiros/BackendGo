@@ -12,17 +12,18 @@
         </tr>
     </thead>
     <tbody>
+    {{range.}}
         <tr>
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
+            <td>{{.Id}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Email}}</td>
+            <td> 
+            <a name="" id="" class="btn btn-warning" href="/edit?id={{.Id}}" role="button#" role="button">Edit</a>
+            |
+            <a name="" id="" class="btn btn-danger" href="/delete?id={{.Id}}" role="button">Delete</a>
+            </td>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Adrian E</td>
-            <td>u201718169@upc.edu.pe</td>
-            <td>Edit | Delete</td>
-        </tr>
+        {{end}}
     </tbody>
 </table>
 {{template "footer"}}
